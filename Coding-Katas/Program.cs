@@ -14,7 +14,21 @@ namespace Coding_Katas
             Welcome("Jane Austen", true, false);
             Welcome("George Orwell", false, false);
             Welcome("Isaac Newton", false, true);
-            
+            Countdown();
+        }
+
+        private static void Countdown()
+        {
+            Console.WriteLine("Please enter a number to start the countdown at: ");
+            int start = int.Parse(Console.ReadLine());
+            for (int i = start; i >= 0; i--)
+            {
+                if (i != 0)
+                    Console.WriteLine(i);
+                else
+                    Console.WriteLine("Blastoff!");
+            }
+            Console.ReadLine();
         }
 
         private static void Welcome(string name, bool isWoman, bool isSir)
