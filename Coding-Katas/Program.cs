@@ -11,6 +11,28 @@ namespace Coding_Katas
         static void Main(string[] args)
         {
             FizzBuzz();
+            Welcome("Jane Austen", true, false);
+            Welcome("George Orwell", false, false);
+            Welcome("Isaac Newton", false, true);
+            
+        }
+
+        private static void Welcome(string name, bool isWoman, bool isSir)
+        {
+            string lastName = name.Split(' ').Last();
+            if ( isWoman == true)
+            {
+                Console.WriteLine("Welcome Ms. " + lastName);
+            }
+            if ( isSir == true )
+            {
+                Console.WriteLine("Welcome Sir " + lastName);
+            }
+            if ( isSir == false && isWoman == false)
+            {
+                Console.WriteLine("Welcome Mr. " + lastName);
+            }
+            Console.ReadLine();
         }
 
         private static void FizzBuzz()
